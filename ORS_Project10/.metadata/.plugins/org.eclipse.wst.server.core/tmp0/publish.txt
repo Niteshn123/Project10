@@ -1,0 +1,4 @@
+#Tomcat publish data
+#Mon Mar 13 12:19:10 IST 2023
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\Lenovo\\.m2\\repository\\org\\springframework\\spring-web\\5.1.4.RELEASE\\spring-web-5.1.4.RELEASE.jar=WEB-INF/lib/spring-web-5.1.4.RELEASE.jar
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\Lenovo\\.m2\\repository\\org\\apache\\tomcat\\embed\\tomcat-embed-websocket\\9.0.14\\tomcat-embed-websocket-9.0.14.jar=WEB-INF/lib/tomcat-embed-websocket-9.0.14.jar

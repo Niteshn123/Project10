@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="C:\Rays Technology\ORS_Project10\ORSProject-10"/>
+		<item value="F:\ORSPROJECT_10\ORSProject-10"/>
+		<item value="F:\ORS_Project-10\ORSProject-10"/>
+		<item value="F:\ORS_Project-10\project 10 latest\ORS_Project-10"/>
+	</list>
+	<section name="ChooseWorkspaceDialogSettings">
+		<item key="DIALOG_X_ORIGIN" value="375"/>
+		<item key="DIALOG_Y_ORIGIN" value="130"/>
+	</section>
+	<section name="WORKBENCH_SETTINGS">
+		<list key="ENABLED_TRANSFERS">
+		</list>
+	</section>
+</section>

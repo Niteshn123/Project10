@@ -1,0 +1,103 @@
+<app-navbar #one></app-navbar>
+
+<style type="text/css">
+  .log1 {
+    padding-top: 13%;
+  }
+  
+  .input-group-addon {
+    box-shadow: 9px 8px 7px #00060b;
+    
+  }
+  .grad{
+  background-image: linear-gradient(to bottom right, rgb(207, 210, 218), rgb(6, 6, 6) grey);
+  background-repeat: no repeat;
+  background-size: 100%;
+  padding-bottom: 11px;
+  }
+  </style>
+<div class="row " style="padding-top: 10%; padding-bottom: 12%; background-image: url(../../assets/MyImages/loginhere.jpg);
+  background-attachment: fixed;
+  background-size: cover; width:auto;
+    height: auto;">
+  <div class="col-sm-4"></div>
+  <div class="col-sm-4">
+    <div class="card input-group-addon grad">
+      <div class="card-body" style="background-image: linear-gradient(to bottom right rgb(109, 43, 44),rgb(53, 37, 37));">
+        <form>
+          <div style="text-align: center;">
+            <b><h1 class=" fonts">{{'Log In' | translate}}</h1></b>
+          </div>
+          <input type="hidden" name="loginUrl" [(ngModel)]="form.loginUrl" class="form-control">
+          <div *ngIf="form.error && form.message == 'Invalid ID or Password'"
+            class="alert alert-danger alert-dismissible">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            {{'Invalid ID or Password' | translate}}
+            <!-- <span class="alertRedColor">{{form.message}}</span> -->
+          </div>
+          <div *ngIf="form.error==false && form.message == 'Logout Successfully'"
+            class="alert alert-success alert-dismissible">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            {{'Log out successfully' | translate}}
+          </div>
+
+          <div *ngIf="form.error && form.message == 'Your Session has been Expired! Please Re-Login'"
+            class="alert alert-danger alert-dismissible">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            {{'Session Expired, Please Login Again' | translate}}
+          </div>
+          <div style="padding-top:3%">
+            <span class="pt-2"><b>{{'Email Id' | translate}}</b>
+              <span class="required-field"></span></span>
+
+            <div class="col-sm-12">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <div class="input-group-text"><i class="fa fa-envelope grey-text"></i> </div>
+                </div>
+                <input type="text" name="loginId" [(ngModel)]="form.loginId" class="form-control input-group-addon"
+                  placeholder="{{'Enter Login Id' | translate}}">
+              </div>
+            </div>
+          <span  *ngIf="inputerror.loginId != null"          
+          class="alertRedColor" style=" color: red;" > {{'loginId'| translate}} </span> 
+          </div> <!--INTERNATIONALIZATION -->
+           <!-- <span class="alertRedColor">{{inputerror.loginId}}</span>  -->
+          <div style="padding-top:3%">
+            <span><b>{{'Password' | translate}}</b>
+              <span class="required-field"></span></span>
+            <div class="col-sm-12">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <div class="input-group-text"><i class="fa fa-key grey-text "></i> </div>
+                </div>
+                <input type="password" name="pwd" [(ngModel)]="form.password" class="form-control input-group-addon"
+                  placeholder="{{'Enter Password' | translate}}">
+              </div>
+            </div>
+            <span  *ngIf="inputerror.password != null"
+            class="alertRedColor" style=" color: red;" > {{'password'| translate}} </span> 
+
+            <!-- <span class="alertRedColor">{{inputerror.password}}</span> -->
+          </div>
+          <div class="row pt-3 pl-3 pb-3">
+            <div class="pt-2">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <button (click)="signIn()" class="btn btn-md btn-success">
+                {{'Sign in' | translate}}</button>
+            </div>
+            &nbsp;
+            <div class="pl-3 pt-2">
+              <a class="btn btn-warning" href="/forgotpassword">{{'Forgot Password' | translate}}</a>
+            </div>
+          </div>
+        </form>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+<app-footer>
+
+</app-footer>
